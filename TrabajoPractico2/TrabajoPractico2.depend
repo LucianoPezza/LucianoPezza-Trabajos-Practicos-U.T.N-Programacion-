@@ -11,3 +11,24 @@
 	<stdlib.h>
 	"Biblioteca.h"
 
+1557536371 source:c:\users\luciano\desktop\lucianopezza-trabajos-practicos-u.t.n-programacion--master\trabajopractico2\biblioteca.c
+	<stdio.h>
+	<string.h>
+	"Biblioteca.h"
+	"Validaciones.h"
+
+1557537235 c:\users\luciano\desktop\lucianopezza-trabajos-practicos-u.t.n-programacion--master\trabajopractico2\biblioteca.h
+
+1557535369 source:c:\users\luciano\desktop\lucianopezza-trabajos-practicos-u.t.n-programacion--master\trabajopractico2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Biblioteca.h"
+
+1557526582 source:c:\users\luciano\desktop\lucianopezza-trabajos-practicos-u.t.n-programacion--master\trabajopractico2\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+
+1557524956 c:\users\luciano\desktop\lucianopezza-trabajos-practicos-u.t.n-programacion--master\trabajopractico2\validaciones.h
+
