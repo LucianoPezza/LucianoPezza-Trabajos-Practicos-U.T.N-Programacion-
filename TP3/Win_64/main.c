@@ -3,6 +3,7 @@
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Employee.h"
+#include "parser.h"
 
 /****************************************************
     Menu:
@@ -22,40 +23,116 @@
 int main()
 {
     int option = 0;
+    int flag = 0;
+    int flag2 = 0;
     LinkedList* listaEmpleados = ll_newLinkedList();
     do{
+
+        printf("\n1.Para cargar los datos por texto\n2.Para cargar los datos por binario\n3 para agregar empleados\n4.Para editar empleados\n5.Para remover empleados\n6.Para mostrar\n7.Para guardar datos cargados en texto\n8.Para guardar los datos cargados en binario\n10.Salir\n");
+        scanf("\n%d",&option);
         switch(option)
         {
             case 1:
-                controller_loadFromText("data.csv",listaEmpleados);
+                if(flag==0)
+                {
+                    system("cls");
+                    controller_loadFromText("data.csv",listaEmpleados);
+                    flag=1;
+
+                }else
+                {
+                    system("cls");
+                    printf("\n Los archivos en texto se cargaron anteriormente");
+                }
+
                 break;
-            case 2:
-                controller_loadFromBinary(listaEmpleados);
+           case 2:
+               if(flag2==0)
+               {
+                    system("cls");
+                    controller_loadFromBinary("data.bin",listaEmpleados);
+                    flag2=1;
+               }else
+               {   system("cls");
+                   printf("Los archivos en binario ya fueron cargados");
+               }
                 break;
             case 3:
-                controller_addEmployee(listaEmpleados);
+                if(flag==1 || flag2==1)
+                {
+                    system("cls");
+                    system("pause");
+                    controller_addEmployee(listaEmpleados);
+                }else
+                {
+                    system("cls");
+                    printf("No se cargaron los datos aun");
+                }
+
                 break;
-            case 4:
-                controller_editEmployee(listaEmpleados);
+             case 4:
+                 if(flag==1 || flag2==1)
+                 {
+                    system("cls");
+                    system("pause");
+                    controller_editEmployee(listaEmpleados);
+                 }else
+                 {
+                    system("cls");
+                    printf("Aun no se cargaron los datos");
+                 }
                 break;
             case 5:
-                controller_removeEmployee(listaEmpleados);
+                if(flag==1 || flag2==1)
+                 {
+                    system("cls");
+                    controller_removeEmployee(listaEmpleados);
+                 }else
+                 {
+                    system("cls");
+                    printf("Aun no se cargaron los datos");
+                 }
                 break;
             case 6:
-                controller_ListEmployee(listaEmpleados);
+                 if(flag==1 || flag2==1)
+                 {
+                    system("cls");
+                    controller_ListEmployee(listaEmpleados);
+                 }else
+                 {
+                    system("cls");
+                    printf("Aun no se cargaron los datos");
+                 }
                 break;
             case 7:
-                controller_sortEmployee(listaEmpleados);
+                 if(flag==1 || flag2==1)
+                 {
+                    system("cls");
+                    controller_saveAsText("data.csv",listaEmpleados);
+                 }else
+                 {
+                    system("cls");
+                    printf("Aun no se cargaron los datos");
+                 }
                 break;
             case 8:
-                controller_saveAsText(listaEmpleados);
+                 if(flag==1 || flag2==1)
+                 {
+                    system("cls");
+                    controller_saveAsBinary("data.bin",listaEmpleados);
+                 }else
+                 {
+                    system("cls");
+                    printf("Aun no se cargaron los datos");
+                 }
                 break;
-            case 9:
-                controller_saveAsBinary(listaEmpleados);
-                break;
+
             case 10:
                 option=10;
-                printf("que te diga saliendo, o lo que quieras.+");
+                printf("Saliendo");
+                break;
+            default:
+                printf("Opcion invalida");
                 break;
         }
     }while(option != 10);

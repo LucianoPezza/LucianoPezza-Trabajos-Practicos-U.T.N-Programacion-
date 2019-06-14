@@ -83,3 +83,48 @@
 	<stdio.h>
 	<stdlib.h>
 
+1560546572 source:c:\users\luciano\downloads\lucianopezza-trabajos-practicos-u.t.n-programacion--master\tp3\win_64\controller.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"parser.h"
+	"Employee.h"
+	"validaciones.h"
+
+1560438871 c:\users\luciano\downloads\lucianopezza-trabajos-practicos-u.t.n-programacion--master\tp3\win_64\linkedlist.h
+
+1560538533 c:\users\luciano\downloads\lucianopezza-trabajos-practicos-u.t.n-programacion--master\tp3\win_64\employee.h
+
+1560538533 source:c:\users\luciano\downloads\lucianopezza-trabajos-practicos-u.t.n-programacion--master\tp3\win_64\employee.c
+	"Employee.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1560549555 source:c:\users\luciano\downloads\lucianopezza-trabajos-practicos-u.t.n-programacion--master\tp3\win_64\main.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Controller.h"
+	"Employee.h"
+	"parser.h"
+
+1560438871 c:\users\luciano\downloads\lucianopezza-trabajos-practicos-u.t.n-programacion--master\tp3\win_64\controller.h
+
+1560548868 source:c:\users\luciano\downloads\lucianopezza-trabajos-practicos-u.t.n-programacion--master\tp3\win_64\parser.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1560438871 c:\users\luciano\downloads\lucianopezza-trabajos-practicos-u.t.n-programacion--master\tp3\win_64\parser.h
+
+1560534012 source:c:\users\luciano\downloads\lucianopezza-trabajos-practicos-u.t.n-programacion--master\tp3\win_64\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"validaciones.h"
+
+1560534012 c:\users\luciano\downloads\lucianopezza-trabajos-practicos-u.t.n-programacion--master\tp3\win_64\validaciones.h
+
