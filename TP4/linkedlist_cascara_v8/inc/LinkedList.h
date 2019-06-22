@@ -21,17 +21,15 @@
 struct Node
 {
     void* pElement;                 //puntero al elemento (persona, empleado, etc.)
-    struct Node* pNextNode;         //puntero al prox nodo
+    struct Node* pNextNode;          //puntero al prox nodo
 }typedef Node;
 
 struct LinkedList
 {
     Node* pFirstNode;
-    int size;                       //cada vez que agrego o elimino un elemento size++/--
+    int size;                   //cada vez que agrego o elimino un elemento size++/--
 }typedef LinkedList;
 #endif
-
-
 
 //Publicas
 LinkedList* ll_newLinkedList(void);
@@ -53,3 +51,8 @@ int ll_containsAll(LinkedList* this,LinkedList* this2);
 LinkedList* ll_subList(LinkedList* this,int from,int to);
 LinkedList* ll_clone(LinkedList* this);
 int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
+Node* nodo_NewNodo(void*pElement);
+int nodo_SetPrimerNodo(LinkedList* this, Node* primerNodo);
+Node* nodo_GetPrimerNodo(LinkedList* this);
+int nodo_SetearSiguienteNodo(LinkedList* this, Node* siguienteNodo);
+Node* nodo_getSiguienteNodo(Node* this);

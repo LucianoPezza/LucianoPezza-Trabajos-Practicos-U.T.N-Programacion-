@@ -7,6 +7,43 @@
 static Node* getNode(LinkedList* this, int nodeIndex);
 static int addNode(LinkedList* this, int nodeIndex,void* pElement);
 
+
+
+Node* nodo_NewNodo(void*pElement)
+{
+    Node* nodo=NULL;
+    nodo = (Node*)calloc(sizeof(Node),1);
+    if(nodo!=NULL)
+    {
+        nodo->pNextNode = NULL;
+        nodo->pElement = pElement;
+    }
+    return nodo;
+}
+
+int nodo_SetPrimerNodo(LinkedList* this, Node* primerNodo)
+{
+int correct;
+
+    if(this!=NULL)
+    {
+        this->pFirstNode=primerNodo;
+        int correct = 1;
+
+    }
+return correct;
+}
+Node* nodo_GetPrimerNodo(LinkedList* this)
+{
+int correct;
+    if(this != NULL)
+    {
+
+        correct = 1;
+    }
+return correct;
+}
+
 /** \brief Crea un nuevo LinkedList en memoria de manera dinamica
  *
  *  \param void
@@ -47,7 +84,7 @@ int ll_len(LinkedList* this)
  */
 static Node* getNode(LinkedList* this, int nodeIndex)
 {
-    return NULL;
+    return nodeIndex;
 }
 
 /** \brief  Permite realizar el test de la funcion getNode la cual es privada
@@ -76,6 +113,8 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
 static int addNode(LinkedList* this, int nodeIndex,void* pElement)
 {
     int returnAux = -1;
+
+
     return returnAux;
 }
 
@@ -152,7 +191,10 @@ int ll_set(LinkedList* this, int index,void* pElement)
 int ll_remove(LinkedList* this,int index)
 {
     int returnAux = -1;
-
+    if(this!=NULL)
+    {
+        returnAux = this->size--;
+    }
     return returnAux;
 }
 
